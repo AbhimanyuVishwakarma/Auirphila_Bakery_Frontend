@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgers - AuIrphila Bakery</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="../../index.html"><img src="../../logo.png" alt="AuIrphila Bakery Logo"></a>
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../categories.html" class="active">Categories</a></li>
+                <li><a href="../gallery.html">Gallery</a></li>
+                <li><a href="../orders.html">Orders</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-account">
+                <a href="#"><i class="fas fa-user"></i></a>
+            </div>
+            <div class="cart">
+                <a href="../cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            </div>
+        </div>
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../categories.html">Categories</a></li>
+                <li><a href="../gallery.html">Gallery</a></li>
+                <li><a href="../orders.html">Orders</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../cart.html">Cart</a></li>
+                <li><a href="#">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Category Banner -->
+    <section class="category-banner">
+        <div class="container">
+            <h1 class="animate-on-scroll" data-animation="fade-in">Gourmet Burgers</h1>
+            <p class="animate-on-scroll" data-animation="fade-in">Delicious handcrafted burgers with our freshly baked
+                buns and premium ingredients</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <!-- <section class="filter-section">
+        <div class="container">
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Sort By:</label>
+                    <select>
+                        <option value="popular">Most Popular</option>
+                        <option value="newest">Newest</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Dietary:</label>
+                    <div class="checkbox-filters">
+                        <label><input type="checkbox"> Vegetarian</label>
+                        <label><input type="checkbox"> Vegan</label>
+                        <label><input type="checkbox"> Gluten-Free</label>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>Price Range:</label>
+                    <input type="range" min="0" max="100" value="50" class="price-slider">
+                    <div class="price-range">₹0 - ₹1000</div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid stagger-fade-in">
+                <!-- Product Card 1 -->
+                <div class="product-card animate-on-scroll zoom-on-hover" data-animation="fade-in-up">
+                    <div class="product-image">
+                        <img src="classic cheese burger.jpeg" alt="Classic Cheeseburger">
+                        <div class="product-tag pulse">Bestseller</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="highlight-text">Classic Cheeseburger</h3>
+                        <!-- <p class="product-description">Juicy beef patty with melted cheddar cheese, lettuce, tomato, and our special sauce on a freshly baked brioche bun.</p> -->
+                        <div class="product-meta">
+                            <div class="product-price price-pulse">₹200</div>
+                            <div class="product-rating twinkle">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(64)</span>
+                            </div>
+                        </div>
+                        <button class="btn add-to-cart pulse-border" data-product-id="burger1"
+                            data-product-name="Classic Cheeseburger" data-product-price="200">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card animate-on-scroll zoom-on-hover" data-animation="fade-in-up">
+                    <div class="product-image">
+                        <img src="veggie burger.jpeg" alt="Veggie Burger">
+                        <div class="product-tag pulse">Vegetarian</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="highlight-text">Veggie Burger</h3>
+                        <!-- <p class="product-description">House-made vegetable patty with avocado, sprouts, tomato, and vegan mayo on a whole wheat bun.</p> -->
+                        <div class="product-meta">
+                            <div class="product-price price-pulse">₹120</div>
+                            <div class="product-rating twinkle">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(42)</span>
+                            </div>
+                        </div>
+                        <button class="btn add-to-cart pulse-border" data-product-id="burger2"
+                            data-product-name="Veggie Burger" data-product-price="120">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card animate-on-scroll zoom-on-hover" data-animation="fade-in-up">
+                    <div class="product-image">
+                        <img src="bbq bacon burger.jpeg" alt="BBQ Bacon Burger">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="highlight-text">BBQ Bacon Burger</h3>
+                        <!-- <p class="product-description">Beef patty topped with crispy bacon, cheddar cheese, caramelized onions, and our signature BBQ sauce.</p> -->
+                        <div class="product-meta">
+                            <div class="product-price price-pulse">₹280</div>
+                            <div class="product-rating twinkle">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(53)</span>
+                            </div>
+                        </div>
+                        <button class="btn add-to-cart pulse-border" data-product-id="burger3"
+                            data-product-name="BBQ Bacon Burger" data-product-price="280">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card animate-on-scroll zoom-on-hover" data-animation="fade-in-up">
+                    <div class="product-image">
+                        <img src="mushroom swiss burger.jpeg" alt="Mushroom Swiss Burger">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="highlight-text">Mushroom Swiss Burger</h3>
+                        <!-- <p class="product-description">Beef patty topped with sautéed mushrooms, melted Swiss cheese, and truffle aioli on a pretzel bun.</p> -->
+                        <div class="product-meta">
+                            <div class="product-price price-pulse">₹300</div>
+                            <div class="product-rating twinkle">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(38)</span>
+                            </div>
+                        </div>
+                        <button class="btn add-to-cart pulse-border" data-product-id="burger4"
+                            data-product-name="Mushroom Swiss Burger" data-product-price="300">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="product-card animate-on-scroll zoom-on-hover" data-animation="fade-in-up">
+                    <div class="product-image">
+                        <img src="Jalepano Burger.jpg" alt="Spicy Jalapeño Burger">
+                        <div class="product-tag pulse">Spicy</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="highlight-text">Spicy Jalapeño Burger</h3>
+                        <!-- <p class="product-description">Beef patty with pepper jack cheese, fresh jalapeños, crispy onion strings, and chipotle mayo.</p> -->
+                        <div class="product-meta">
+                            <div class="product-price price-pulse">₹300</div>
+                            <div class="product-rating twinkle">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(47)</span>
+                            </div>
+                        </div>
+                        <button class="btn add-to-cart pulse-border" data-product-id="burger5"
+                            data-product-name="Spicy Jalapeño Burger" data-product-price="300">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="product-card animate-on-scroll zoom-on-hover" data-animation="fade-in-up">
+                    <div class="product-image">
+                        <img src="gourmet lamb burger.jpeg" alt="Gourmet Lamb Burger">
+                        <div class="product-tag pulse">Premium</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="highlight-text">Gourmet Lamb Burger</h3>
+                        <!-- <p class="product-description">Seasoned lamb patty with feta cheese, cucumber, red onion, and tzatziki sauce on a Mediterranean bun.</p> -->
+                        <div class="product-meta">
+                            <div class="product-price price-pulse">₹320</div>
+                            <div class="product-rating twinkle">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(36)</span>
+                            </div>
+                        </div>
+                        <button class="btn add-to-cart pulse-border" data-product-id="burger6"
+                            data-product-name="Gourmet Lamb Burger" data-product-price="320">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <!-- <section class="newsletter-section">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with our latest products and special offers!</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your Email Address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section> -->
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>AuIrphila Bakery</h3>
+                <p>Delicious treats made fresh daily with premium ingredients and love.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../categories.html">Products</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> AuIrphila Bakery, opposite VM Polytechnic, Narsinghpur.</p>
+                <p><i class="fas fa-phone"></i> 9131688187</p>
+                <p><i class="fas fa-envelope"></i> info@auirphilabakery.com</p>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive updates on new products and special offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 AuIrphila Bakery. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/cart.js"></script>
+</body>
+
+</html>

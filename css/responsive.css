@@ -1,0 +1,233 @@
+/* Responsive Styles for AuIrphila Bakery */
+
+/* Large Screens (Desktops) */
+@media screen and (max-width: 1200px) {
+    .slide-content {
+        max-width: 500px;
+    }
+    
+    .slide-content h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media screen and (max-width: 992px) {
+    .desktop-nav {
+        display: none;
+    }
+    
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    .search-bar {
+        width: 200px;
+    }
+    
+    .slide-content {
+        max-width: 400px;
+        padding: var(--spacing-md);
+    }
+    
+    .slide-content h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-slider {
+        height: 500px;
+    }
+    
+    .products-container {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .footer-column:last-child {
+        grid-column: span 2;
+        margin-top: var(--spacing-md);
+    }
+}
+
+/* Small Screens (Mobile Landscape) */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 1rem 3%;
+    }
+    
+    .header-right {
+        order: 3;
+        width: 100%;
+        margin-top: var(--spacing-sm);
+        justify-content: space-between;
+    }
+    
+    .search-bar {
+        width: 100%;
+        order: 1;
+    }
+    
+    .user-account, .cart {
+        order: 2;
+    }
+    
+    .hero-slider {
+        height: 400px;
+    }
+    
+    .slide-content {
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .slide-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .slide-content p {
+        font-size: 1rem;
+    }
+    
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .products-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .promo-content h2 {
+        font-size: 2rem;
+    }
+    
+    .categories-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Extra Small Screens (Mobile Portrait) */
+@media screen and (max-width: 576px) {
+    .logo img {
+        height: 65px; /* Increased from 50px to 65px for better visibility on mobile */
+    }
+    
+    .header-right {
+        flex-wrap: wrap;
+    }
+    
+    .hero-slider {
+        height: 350px;
+    }
+    
+    .slide-content {
+        max-width: 90%;
+        padding: var(--spacing-sm);
+    }
+    
+    .slide-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .slide-content p {
+        margin-bottom: 1rem;
+    }
+    
+    .slide-content .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .promo-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .promo-content p {
+        font-size: 1rem;
+    }
+    
+    .categories-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-card {
+        height: 200px;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+    
+    .footer-column:last-child {
+        grid-column: span 1;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Mobile Menu Toggle */
+.mobile-nav.active {
+    display: block;
+}
+
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 1200px) {
+    .categories-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+}
