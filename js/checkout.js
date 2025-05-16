@@ -353,6 +353,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     reviewOrderBtn.addEventListener('click', function() {
         // Update review information
+        updateReviewItems();
         updateReviewShippingAddress();
         updateReviewBillingAddress();
         
@@ -485,6 +486,36 @@ document.addEventListener('DOMContentLoaded', function() {
         if (reviewTax) reviewTax.textContent = `₹${tax.toFixed(2)}`;
         if (reviewShipping) reviewShipping.textContent = `₹${shipping.toFixed(2)}`;
         if (reviewTotal) reviewTotal.textContent = `₹${total.toFixed(2)}`;
+    }
+
+    // Add this function to update the review items section
+    function updateReviewItems() {
+        const cart = loadCartData();
+        const reviewItemsSection = document.querySelector('.review-section:first-child');
+        
+        if (!reviewItemsSection) {
+            console.error('Review items section not found');
+            return;
+        }
+        
+        // Create items text
+        let itemsText = '';
+        if (cart.length > 0) {
+            itemsText = cart.map(item => `${item.name} (${item.quantity})`).join(', ');
+        } else {
+            itemsText = 'No items in cart';
+        }
+        
+        // Get total from order summary
+        const totalElement = document.querySelector('.total-amount');
+        const totalText = totalElement ? totalElement.textContent : '₹0.00';
+        
+        // Update the review section
+        reviewItemsSection.innerHTML = `
+            <h3>Items</h3>
+            <p>${itemsText}</p>
+            <p><strong>Total:</strong> ${totalText}</p>
+        `;
     }
 
     // Modify the existing DOMContentLoaded event listener
