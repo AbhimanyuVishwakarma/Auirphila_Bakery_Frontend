@@ -23,7 +23,7 @@ export async function saveOrderToDatabase(orderData) {
         
         // Use the backend API endpoint to save the order
         // Include the JWT token in the Authorization header
-        const response = await fetch('/api/save-order', {
+        const response = await fetch('https://auiraphila-bakery-2.onrender.com/api/save-order', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
