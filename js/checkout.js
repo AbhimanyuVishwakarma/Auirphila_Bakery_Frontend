@@ -485,7 +485,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         // Send order confirmation email with complete order details
                         try {
                             console.log('Sending order confirmation email...');
-                            await fetch('/api/confirm-order', {
+                            await fetch('https://auiraphila-bakery-2.onrender.com/api/confirm-order', {
                                 method: 'POST',
                                 headers: { 'Content-Type': 'application/json' },
                                 body: JSON.stringify({
