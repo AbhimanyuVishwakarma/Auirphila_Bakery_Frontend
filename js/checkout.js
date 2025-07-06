@@ -485,7 +485,15 @@ document.addEventListener('DOMContentLoaded', function() {
                         // Send order confirmation email with complete order details
                         try {
                             console.log('Sending order confirmation email...');
-                            await fetch('https://auiraphila-bakery-2.onrender.com/api/confirm-order', {
+                            // Determine if we're in development or production mode
+                            const isLocalDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+                            const apiBaseUrl = isLocalDevelopment 
+                                ? `${window.location.protocol}//${window.location.hostname}:${window.location.port}` 
+                                : 'https://auiraphila-bakery-2.onrender.com';
+                                
+                            console.log(`Using API base URL for email confirmation: ${apiBaseUrl}`);
+                            
+                            await fetch(`${apiBaseUrl}/api/confirm-order`, {
                                 method: 'POST',
                                 headers: { 'Content-Type': 'application/json' },
                                 body: JSON.stringify({

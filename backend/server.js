@@ -82,9 +82,19 @@ app.post('/api/confirm-order', async (req, res) => {
     const nodemailer = require('nodemailer');
     const transporter = require('./mailer');
     
-    // Send the email
-    await transporter.sendMail(mailOptions);
-    console.log('Enhanced order confirmation email sent to:', customerEmail);
+    // Send the email with enhanced error logging
+    try {
+      const info = await transporter.sendMail(mailOptions);
+      console.log('Enhanced order confirmation email sent to:', customerEmail);
+      console.log('Email Message ID:', info.messageId);
+      console.log('Email Response:', info.response);
+    } catch (emailError) {
+      console.error('Detailed email sending error:');
+      console.error('- Error name:', emailError.name);
+      console.error('- Error message:', emailError.message);
+      console.error('- Error code:', emailError.code);
+      throw emailError; // Re-throw to be caught by the outer try/catch
+    }
     
     res.status(200).json({ message: 'Order confirmed and enhanced email sent.' });
   } catch (err) {

@@ -21,9 +21,18 @@ export async function saveOrderToDatabase(orderData) {
             console.error('Error getting JWT token:', e);
         }
         
+        // Determine if we're in development or production mode
+        // In development, use localhost; in production, use the render.com URL
+        const isLocalDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        const apiBaseUrl = isLocalDevelopment 
+            ? `${window.location.protocol}//${window.location.hostname}:${window.location.port}` 
+            : 'https://auiraphila-bakery-2.onrender.com';
+            
+        console.log(`Using API base URL: ${apiBaseUrl}`);
+        
         // Use the backend API endpoint to save the order
         // Include the JWT token in the Authorization header
-        const response = await fetch('https://auiraphila-bakery-2.onrender.com/api/save-order', {
+        const response = await fetch(`${apiBaseUrl}/api/save-order`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
